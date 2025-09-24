@@ -6,7 +6,7 @@ import { useAccount, useChainId, useDisconnect } from "wagmi";
 import SolanaConnectButton from "../components/SolanaConnectButton";
 
 export default function ConnectPage() {
-  // --- EVM wallet ---
+
   const { open } = useWeb3Modal();
   const { address, isConnected } = useAccount();
   const chainId = useChainId();
@@ -14,7 +14,7 @@ export default function ConnectPage() {
 
   return (
     <div className="flex flex-col items-center gap-6 mt-10">
-      {/* ---------- EVM Wallet ---------- */}
+ 
       {isConnected ? (
         <div className="flex flex-col items-center">
           <p className="text-lg font-semibold">
@@ -29,14 +29,14 @@ export default function ConnectPage() {
         </div>
       ) : (
         <button
-          onClick={() => open()}
+          onClick={() => open({ view: "Connect" })}
           className="px-4 py-2 bg-blue-600 text-white rounded-md"
         >
           Connect EVM Wallet
         </button>
       )}
 
-      {/* ---------- Solana Wallet ---------- */}
+  
       <SolanaConnectButton />
     </div>
   );

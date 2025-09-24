@@ -2,6 +2,7 @@
 
 import "./globals.css";
 import { WagmiProvider } from "wagmi";
+import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactNode, useState } from "react";
 import { wagmiConfig } from "../lib/walletConfig";
