@@ -9,7 +9,7 @@ Solana (Phantom) support will be added next.
 1. Clone the repo:
 
    ```bash
-   git clone 
+   git clone https://github.com/Ossy-em/wallet-ui-demo.git
    cd wallet-ui-demo
 
    ```
